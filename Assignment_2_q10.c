@@ -42,4 +42,5 @@ int main()
     default:
         printf("Invalid input, please enter from the specified ones.");
     }
+    return 0;
 }
