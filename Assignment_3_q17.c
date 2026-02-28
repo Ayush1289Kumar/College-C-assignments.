@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    // WAP to find the LCM of two numbers.
+    /*
+    Formula = lcm = |a x b| / gcd
+    */
+    int num1, num2, a, b, temp, gcd, lcm;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    a = num1;
+    b = num2;
+
+    while (b != 0)
+    {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    gcd = a;
+
+    lcm = (num1 * num2) / gcd;
+
+    printf("The LCM of %d and %d is: %d\n", num1, num2, lcm);
+
+    return 0;
+}
